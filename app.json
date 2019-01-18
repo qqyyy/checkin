@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/personcenter/personcenter",
+    "pages/mingpian/mingpian",
+    "pages/mycard/mycard",
+    "pages/mycompany/mycompany",
+    "pages/company/company",
+    "pages/adddetial/adddetial",
+    "pages/joincompany/joincompany",
+    "pages/myactivity/myactivity"    
+  ],
+  "window": {
+   "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#4cb4e7",
+  "navigationBarTitleText": "固定签到",
+  "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine1.png",
+        "pagePath": "pages/personcenter/personcenter",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/partner.png",
+        "selectedIconPath": "images/partner1.png",
+        "pagePath": "pages/mingpian/mingpian",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+
+  "debug": false
+}

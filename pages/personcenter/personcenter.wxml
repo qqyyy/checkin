@@ -1,0 +1,116 @@
+
+<canvas style="width: 100%; height: 20vh;background:rgb(25, 158, 247); position:relative;" canvas-id="fire"></canvas>
+
+
+<view style='display:{{display}}' class='button'>
+   <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" 
+ class='button1'>登录</button>
+ </view>
+
+ <view class='avatarandtext' style='display:{{display1}}'>
+     <view class='itemdisplay2'>
+          <image src='{{userInfo.avatarUrl}}' class='avatar'></image>
+          <view class='name'>{{userInfo.nickName}}</view>
+     </view>
+</view>
+
+
+
+
+
+<view class='itemstyle'>
+ <view class="server-t">
+      <view class="server-text fs26">扫 码 签 到</view>
+    </view>
+
+  <view class='substyle' bindtap='scancode'>
+      <image src='../../images/scanqrcode.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>扫码签到</view>
+  </view>
+ <view class='substyle' bindtap='myactivity'>
+      <image src='../../images/activity.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>出勤统计</view>
+  </view>
+<view class='substyle' bindtap='suggestion'>
+      <image src='../../images/suggestion.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>意见反馈</view>
+  </view>
+  <view class='substyle' bindtap='gotocompany'>
+      <image src='../../images/company.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext1'>创建加入</view>
+  </view>
+
+
+<view class="server-t">
+      <view class="server-text fs26">固 定 签 到</view>
+    </view>
+
+<view class='substyle' bindtap='qiandao'>
+    <image src='../../images/qiandao.png' style='width:30px;height:30px'></image>
+    <view class='qiandaotext'>一键签到</view>
+  </view>
+  <view class='substyle' bindtap='qiantui'>
+    <image src='../../images/qiantui.png' style='width:30px;height:30px'></image>
+    <view class='qiandaotext'>一键签退</view>
+  </view>
+
+  <view class='substyle' bindtap='mycompany'>
+      <image src='../../images/mycompany.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>出勤统计</view>
+  </view>
+ 
+  <view class='substyle' bindtap='mymp'>
+      <image src='../../images/mymp.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>我的名片</view>
+  </view>
+  
+  <!-- <view class='substyle' bindtap='aboutus'>
+      <image src='../../images/about_us.png' style='width:30px;height:30px'></image>
+      <view class='qiandaotext'>关于我们</view>
+  </view> -->
+</view>
+
+
+
+
+<!--index.wxml-->
+<!--   背景音乐  -->
+<view class='bgmView' catchtap='BGM'>
+  <image wx:if='{{bgm}}' class='bgmImg {{bgmImgAni}}' src='/images/kaishi.png'></image>
+  <image wx:else class='bgmImg' src='/images/zanting.png'></image>
+</view>
+
+
+<view style='width:100%;position:fixed;bottom:-10px;'>
+  <image src='{{person1}}' class='person1'></image>
+  <image src='{{person2}}' class='person2'></image>
+</view>
+
+<!-- <view class='box' style='display:{{box}}'>
+  <view style='margin-bottom:5px;'>贴心小贴士：</view>
+  <view class='boxtext'>1.   点击·•·添加到我的小程序，使用更方便</view>
+   <view class='boxtext'>2.   欢迎公众号免费关联</view>
+  <view class='boxtext'>3、更多问题点击右方悬浮球👉</view>
+</view> -->
+
+
+<view bindtap='adddetial'>
+      <image class="add_icon" src="/images/tx.png"></image>
+  </view>
+
+
+
+<view style='display:{{mask}}' class='mask' bindtap='hidden1'></view>
+<view class="suggestion" style='display:{{mask}}'>
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请写出您的建议与反馈" placeholder-style='color:#ddd;font-size:15px;' name="textarea" class='textarea' maxlength='100'/>
+    <button form-type="submit" class='submitbut'> 提交意见 </button>
+  </form>
+</view>
+<view style='display:{{mask}}' class='suggesttext'>
+  <view></view>
+  <view style='color:#ddd;font-size:18px;margin-top:5px;'>（点击任意处关闭）</view>
+</view>
+
+
+<view style='display:{{mask1}}' class='mask1'></view>

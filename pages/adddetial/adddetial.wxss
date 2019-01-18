@@ -1,0 +1,84 @@
+/* pages/about/index.wxss */
+
+
+image {
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin: 10px -10px 0;
+  background: #eee;
+  padding: 10px;
+}
+
+.footer view {
+  margin: 7px;
+}
+
+.footer .link {
+  font-style: italic;
+}
+
+text.link {
+  text-decoration: underline;
+  color: #337ab7;
+  /* font-style: italic;  */
+}
+
+.tip.hdBar {
+  border-bottom: none;
+   color:chartreuse;
+}
+
+.tip.hdBar text {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+ 
+}
+
+.bdContent {
+  background: rgb(76, 170, 224) center;
+   color:rgb(238, 245, 231);
+  margin: 0 +20px;
+  width:80%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+
+  /* font-size: 17px; *//* border-radius: 2px; */
+}
+
+.container .tip.bdContent:first-child {
+  text-indent: 0;
+   color:chartreuse;
+  /* margin-top: 10px; */
+}
+.title
+{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+.title1
+{
+  margin-top: 10px; 
+    font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+}
+.aaa
+{
+  color:rgb(253, 252, 253);
+  background-color: rgb(48, 148, 241);
+font-size: 15px;
+  
+  
+  text-align: center;
+  width: 80%;
+}

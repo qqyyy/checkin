@@ -1,0 +1,39 @@
+<view class='container'>
+ 
+
+ <view class="aaa">
+ <text>注意：</text>
+ </view>
+  <view class='hdBar'>
+    <text class='title1'>遇到问题联系👇</text>
+  </view>
+  <view class='bdContent'>
+  
+  </view>
+    <view class='hdBar'>
+    <text class='title'>扫码签到使用方法</text>
+  </view>
+  <view class='bdContent'>
+
+  </view>
+  <view class='hdBar'>
+    <text class='title'>固定签到使用方法</text>
+  </view>
+  <view class='bdContent'>
+
+  </view>
+
+  <view class='hdBar'>
+    <text class='title'>扫码签到限制</text>
+  </view>
+  <view class='bdContent'>
+
+  </view>
+  <view class='hdBar'>
+    <text class='title'>固定签到限制</text>
+  </view>
+  <view class='bdContent'>
+
+  </view>
+
+</view>

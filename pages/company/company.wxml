@@ -1,0 +1,98 @@
+<import src="../../component/toastTest/toastTest.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+
+<view class='MianContent'>
+<image src='{{header}}' style='height:27vh;width:80vw;'></image>
+<view class='itemall'>
+     <view class='item1' bindtap='createact'>创建扫码签到</view>
+     <view class='item' bindtap='createcompany'>创建固定签到</view>
+     <view class='item' bindtap='joincompany'>加入固定签到</view>
+     <view class='item' bindtap='mycompany'>我的固定签到</view>
+  </view>
+  
+</view>
+
+<!--创建公司-->
+<view class='mask' style='display:{{maskandform}}' bindtap='hidden'></view>
+<view class='form' style='display:{{maskandform}}'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="companyname">名称：</view>
+      <input name="input1" placeholder="名称" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='20' bindfocus=''/>
+    </view>
+    <view class="section">
+      <view class="companyname">地点：</view>
+      <input name="input2" placeholder="地点即为签到地点" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='40' value='{{mylocaltion}}' bindtap='chooselocation'/>
+    </view>
+    <view class="section">
+      <view class="companyname">联系方式：</view>
+      <input name="input4" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='11' placeholder="联系方式" type='number' bindfocus=''/>
+    </view>
+    <view class="section">
+      <view class="companyname">开始时间：</view>
+       <picker mode="time" value="{{time}}" start="00:00" bindchange="bindTimeChange" class='inputcname2'>
+      <input name ='worktime' value='{{time}}' class='addinputstyle' bindfocus='' placeholder='请选择' disabled='true'></input>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="companyname">结束时间：</view>
+       <picker mode="time" value="{{time1}}" start="00:00" bindchange="bindTimeChange1" class='inputcname2'>
+       <input name ='leavetime' value='{{time1}}' class='addinputstyle' bindfocus=''placeholder='请选择' disabled='true'></input>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="companyname">创建人：</view>
+      <input name="input3" class='inputcname1' placeholder-style='color:#fff;font-size:14px;' maxlength='20' disabled='true' value='{{username}}' bindfocus=''/>
+    </view>
+<view class='boxtext'>选择地点时，请点击地图下方位置选项选定(红点选定)</view>
+    <view class="btn-area">
+      <button formType="submit" class='button'>提交</button>
+    </view>
+  </form>
+</view>
+
+<!--创建活动-->
+<view class='mask' style='display:{{maskandform1}}' bindtap='hidden'></view>
+<view class='form' style='display:{{maskandform1}}'>
+  <form bindsubmit="formSubmit1" bindreset="formReset">
+    <view class="section">
+      <view class="companyname">活动名称：</view>
+      <input name="input1" placeholder="活动名称" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='20' bindfocus=''/>
+    </view>
+    <view class="section">
+      <view class="companyname">活动地点：</view>
+      <input name="input2" placeholder="活动地点即为签到地点" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='40' value='{{mylocaltion}}' bindtap='chooselocation'/>
+    </view>
+    <view class="section">
+      <view class="companyname">联系方式：</view>
+      <input name="input4" class='inputcname' placeholder-style='color:#5d5d5d;font-size:14px;' maxlength='11' placeholder="联系方式" type='number' bindfocus=''/>
+    </view>
+    <view class="section">
+      <view class="companyname">签到时间：</view>
+       <picker mode="time" value="{{time}}" start="03:00" bindchange="bindTimeChange" class='inputcname2'>
+      <input name ='worktime' value='{{time}}' class='addinputstyle' bindfocus='' placeholder='请选择' disabled='true'></input>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="companyname">创建人：</view>
+      <input name="input3" class='inputcname1' placeholder-style='color:#fff;font-size:14px;' maxlength='20' disabled='true' value='{{username}}' bindfocus=''/>
+    </view>
+    <view class='boxtext'>选择地点时，请点击地图下方位置选项选定(红点选定)</view>
+    <view class="btn-area">
+      <button formType="submit" class='button'>创建</button>
+    </view>
+  </form>
+</view>
+
+<!--场景使用说明-->
+
+<view class='qiandaosm'>
+   <view>
+     <i class="icon iconfont icon-tip"></i>
+     <text>班级场景适用于长期，地点稳定，人数较多的情况</text>
+    </view>
+    <view>
+     <i class="icon iconfont icon-tip"></i>
+     <text>扫码签到适用于长期或短期，地点不稳定，人数较多的情况</text>
+    </view> 
+</view>
